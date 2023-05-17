@@ -1,0 +1,16 @@
+PROPOSED METHOD WITH ARCHITECTURE
+The rough workflow of our compiler :
+Lets break up these different parts of the compiler organizationally. Thereare three main parts for this compiler: the pre-processing, the parser, and the code generator.
+
+In pre-processing part, out task is to take the raw free-form source code and turnit into a series of tokens, the individual units of the language i.e the lexical analyzer reads the source code 
+and generates a stream of tokens that represent the lexical structure of the program. The tokens represent keywords, operators, identifiers, constants, and other language constructs. 
+
+Then we move to the parser. The syntax analyzer receives the stream of tokens from the lexical analyzer and uses a context-free grammar to generate a syntax tree that represents the 
+syntactic structure of the program. It checks the syntax of the input program against formal language grammar.The parser's part is to take that series of tokens and ensure that their orderingfollows the
+rules of the language syntax.
+
+The code generator receives the syntax tree produced by the syntax analyzer and generates the assembly code. The assembly code represents the program in a low-level format that can be 
+executed by a computer's CPU, checks what type of operators and conditions arethere andexecutes them.
+
+The interpreter receives the assembly code produced by the code generator and executes the program. The interpreter simulates the behavior of a computer CPU by parsing each 
+instruction in the program and performing the corresponding actions and then we print them as output
